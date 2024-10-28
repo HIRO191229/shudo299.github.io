@@ -1,0 +1,68 @@
+/* 全体のデザイン */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+/* 見出し */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #4a90e2;
+}
+
+/* ボタンセクション */
+.button-container {
+    display: flex;
+    flex-direction: column; /* ボタンを縦に並べる */
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* 投票ボタン */
+.vote-button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 15px; /* 角を丸く */
+    width: 250px; /* ボタン幅を広げる */
+    height: auto; /* 自動調整で高さが変わるように */
+    font-size: 1.2em;
+    padding: 10px; /* 文字とボタンの間に余白を追加 */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    word-wrap: break-word; /* 単語が長い場合に自動で折り返す */
+    white-space: normal; /* 複数行に対応 */
+    text-align: center; /* 文字を中央揃え */
+}
+
+.vote-button:hover {
+    background-color: #ffa07a;
+    transform: scale(1.05);
+}
+
+/* 投票済みメッセージ */
+#thank-you {
+    margin-top: 30px;
+    font-size: 1.8em;
+    color: #32cd32;
+}
+
+/* 隠すためのクラス */
+.hidden {
+    display: none;
+}
+
+/* メディアクエリ - 小さい画面向け */
+@media (max-width: 600px) {
+    .vote-button {
+        width: 180px; /* スマートフォン向けに幅を狭める */
+        font-size: 1em;
+        padding: 8px; /* スマホ向けに余白を調整 */
+    }
+}
